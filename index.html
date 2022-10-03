@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>PickBazar | Grocery</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navbar">
+            <div class="logodiv"><img class="logo" src="./Media/PickBazar.webp" alt=""></div>
+
+            <div class="dropdownlist">
+                <button id="dropdownbtn"><img class="icons" src="./Media/icons/apple icon.png"
+                        alt=""><span class="items">Grocery</span>
+                    <ion-icon id="down" name="caret-down-outline"></ion-icon>
+                    <ion-icon id="up" name="caret-up-outline"></ion-icon>
+                </button>
+
+                <div class="dropdown">
+                    <div class="items" onclick="select()"> <img class="icons" src="./Media/svg icons/apple.svg" alt=""><span class="items">
+                        Grocery</span></div>
+                    <div class="items" onclick="select1()"> <img class="icons" src="./Media/icons/bakery icon.png" alt=""><span class="items">
+                            Bakery</span></div>
+                    <div class="items" onclick="select2()"> <img class="icons" src="./Media/icons/makeup icon.png" alt=""><span class="items">
+                            Makeup</span></div>
+                    <div class="items" onclick="select3()"> <img class="icons" src="./Media/icons/bags.png" alt=""><span class="items"> Bags</span></div>
+                    <div class="items" onclick="select4()"> <img class="icons" src="./Media/icons/clothes icon.png" alt=""><span class="items">
+                            Clothing</span></div>
+                    <div class="items" onclick="select5()"> <img class="icons" src="./Media/icons/furniture.png"
+                            alt=""><span class="items">Furniture</span></div>
+                    <div class="items" onclick="select6()"> <img class="icons" src="./Media/icons/apple icon.png" alt=""><span class="items">Daily
+                            Needs</span></div>
+                    <div class="items" onclick="select7()"> <img class="icons" src="./Media/icons/books icon.png"
+                            alt=""><span class="items">Books</span></div>
+                </div>
+            </div>
+            <div class="sidelist">
+                <ul>
+                   <li> Shops</li>
+                   <li> Offers</li>
+                   <li> FAQ</li>
+                   <li> Contact</li>
+                   <div>
+                    <li> Become a Seller</li>
+                   <li> Join</li>
+                   </div>
+
+                </ul>
+            </div>
+        </nav>
+
+            <div class="subheader1">
+                <h1>Groceries Delivered in 90 Minute</h1>
+                <p>Get your healthy foods & snacks delivered at your doorsteps all day everyday</p>
+                <div>
+                    <input type="text" placeholder="Search your products from here">
+                    <button><ion-icon name="search-outline"></ion-icon> Search</button>
+                </div>
+            </div>
+
+            <div class="addtocart" id="addtocart" onclick="openNav()">
+                <div><ion-icon class="cartbag" name="bag-handle-outline"></ion-icon>
+                    <span class="cartitems">0 items</span></div>
+                <div class="cartitems">$0.00</div>
+            </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="sidebar-header">
+            <ion-icon name="close-outline" class="closebtn" onclick="closeNav()"></ion-icon>
+            <div><ion-icon class="cartbag" name="bag"></ion-icon>
+                <span class="cartitems">0 items</span></div>
+        </div> 
+        <div class="sidebar-body">
+            <ion-icon name="bag-handle" class="emptybag"></ion-icon>
+            <h3 class="sidebar-h3">No products found</h3>
+        </div>
+        <div class="sidebar-footer">
+            <div class="checkout">
+                <span>checkout</span>
+                <span>$0.00</span>
+            </div>
+        </div>
+          </div>
+
+</body>
+<script src="./index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
