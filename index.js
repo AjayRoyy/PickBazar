@@ -2,6 +2,7 @@
 
 
     let body = document.querySelector("body");
+    body.style.position = "relative"
     let html = ``;
 
     // body.innerHTML = html;
@@ -14,7 +15,6 @@
     header.style.backgroundImage = "url(./Media/backgroundImage1920jpeg.jpg)";
     header.style.backgroundRepeat = "no-repeat";
     header.style.backgroundSize = "cover";
-    header.style.position = "relative"
 
 
     //navbar part
@@ -42,12 +42,12 @@
         icons[i].style.height = "16px";
     }
 
-    // let dropdownlist = document.querySelectorAll(".dropdownlist");
-    // dropdownlist.style.display = "inline-block";
-    // dropdownlist.style.alignSelf = "baseline";
-    // dropdownlist.style.height = "auto";
-    // dropdownlist.style.width = "auto";
-    // dropdownlist.style.marginLeft = "40px";
+    let dropdownlist = document.querySelector(".dropdownlist");
+    dropdownlist.style.display = "inline-block";
+    dropdownlist.style.alignSelf = "baseline";
+    dropdownlist.style.height = "auto";
+    dropdownlist.style.width = "auto";
+    dropdownlist.style.marginLeft = "40px";
 
 
     // dropdown button
@@ -260,14 +260,143 @@ function openNav() {
   }
 
     let addtocart= document.getElementById("addtocart");
-    let cartbag = document.querySelector(".cartbag");
+            addtocart.style.width= "80px";
+            addtocart.style.height= "100px";
+            addtocart.style.backgroundColor= "rgb(0,159,127)";
+            addtocart.style.position= "fixed";
+            addtocart.style.top= "50%";
+            addtocart.style.right= "0%";
+            addtocart.style.borderRadius="5px 0px 0px 5px";
+            addtocart.style.display= "flex";
+            addtocart.style.justifyContent= "center";
+            addtocart.style.flexDirection= "column";
+            addtocart.style.alignItems= "center";
+            addtocart.style.color="white";
+            addtocart.style.gap= "10px";
+
+    let cartbag = document.querySelector(".addtocart div .cartbag");
+            cartbag.style.width= "20px";
+            cartbag.style.height= "20px";
+
+    let cartbagitemscount = document.querySelector(".addtocart div span");
+        cartbagitemscount.style.fontSize= "14px";
+        cartbagitemscount.style.fontWeight= "bold";
+
+    let addtocartDiv1 = document.querySelector(".addtocart div:nth-child(1)");
+        addtocartDiv1.style.display= "flex";
+        addtocartDiv1.style.justifyContent= "center";
+        addtocartDiv1.style.alignItems= "center";
+        addtocartDiv1.style.gap= "5px";
+
+    let  addtocartDiv2 = document.querySelector(".addtocart div:nth-child(2)");
+        addtocartDiv2.style.width="60px";
+        addtocartDiv2.style.height= "40px";
+        addtocartDiv2.style.backgroundColor= "white";
+        addtocartDiv2.style.color= "rgb(0,159,127)";
+        addtocartDiv2.style.display= "flex";
+        addtocartDiv2.style.justifyContent= "center";
+        addtocartDiv2.style.alignItems= "center";
+        addtocartDiv2.style.borderRadius= "5px";
+        addtocartDiv2.style.fontSize= "16px";
+        addtocartDiv2.style.fontWeight= "bold";
+        addtocartDiv2.style.zIndex= "-1";
+
     let mySidenav = document.getElementById("mySidenav");
-    let sidebarheader = document.querySelector(".sidebar-header");
+        mySidenav.style.height= "100%";
+        mySidenav.style.width= "0";
+        mySidenav.style.position= "fixed";
+        mySidenav.style.zIndex= "1";
+        mySidenav.style.top= "0";
+        mySidenav.style.right= "0";
+        mySidenav.style.backgroundColor= "white";
+        mySidenav.style.overflowX= "hidden";
+        mySidenav.style.transition= "0.5s";
+
+    let sidebarheader = document.querySelector(".sidenav .sidebar-header");
+        sidebarheader.style.borderBottom= "1px solid rgba(187, 187, 187, 0.501)";
+        sidebarheader.style.width= "100%";
+        sidebarheader.style.height= "70px";
+        sidebarheader.style.display= "flex";
+        sidebarheader.style.alignItems= "center";
+        sidebarheader.style.paddingLeft= "2rem";
+        sidebarheader.style.gap= "30px";
+
+    let sidebarcartbag = document.querySelector(".sidenav .sidebar-header .cartbag");
+    sidebarcartbag.style.color="rgb(0,159,127)";
+    sidebarcartbag.style.fontWeight= "bolder";
+
+    let sidebarcartitems = document.querySelector(".sidenav .sidebar-header span");
+    sidebarcartitems.style.color="rgb(0,159,127)";
+    sidebarcartitems.style.fontWeight= "bolder";
+
+    let sidebarclosebtn = document.querySelector(".sidenav .sidebar-header .closebtn");
+        sidebarclosebtn.style.position= "absolute";
+        sidebarclosebtn.style.top= "20px";
+        sidebarclosebtn.style.left= "75%";
+        sidebarclosebtn.style.fontSize= "36px";
+        sidebarclosebtn.style.marginLeft= "50px";
+        sidebarclosebtn.style.width= "20px";
+        sidebarclosebtn.style.height= "20px";
+        sidebarclosebtn.style.backgroundColor= "rgb(228, 228, 228)";
+        sidebarclosebtn.style.borderRadius= "50%";
+        sidebarclosebtn.style.padding= "5px";
+
+
     let sidebarbody = document.querySelector(".sidebar-body");
+        sidebarbody.style.width= "100%";
+        sidebarbody.style.height= "80%";
+        sidebarbody.style.display= "flex";
+        sidebarbody.style.justifyContent= "center";
+        sidebarbody.style.alignItems= "center";
+        sidebarbody.style.flexDirection= "column";
+
+    let sidebarbodyh3 = document.querySelector(".sidebar-body h3");
+    sidebarbodyh3.style.color= "rgb(0,159,127)";
+
+    let sidebarbodyemptybag = document.querySelector(".sidebar-body .emptybag");
+
+    sidebarbodyemptybag.style.width= "300px";
+    sidebarbodyemptybag.style.height= "400px";
+    sidebarbodyemptybag.style.color="rgb(0,159,127)";
+
     let sidebarfooter = document.querySelector(".sidebar-footer");
+    sidebarfooter.style.width= "100%";
+    sidebarfooter.style.height="80px";
+    sidebarfooter.style.display= "flex";
+    sidebarfooter.style.justifyContent= "center";
+    sidebarfooter.style.alignItems= "center";
+
+    let sidebarfootercheckout = document.querySelector(".checkout");
+    sidebarfootercheckout.style.width= "80%";
+    sidebarfootercheckout.style.height= "50px";
+    sidebarfootercheckout.style.backgroundColor="rgb(0,159,127)" ;
+    sidebarfootercheckout.style.display= "flex";
+    sidebarfootercheckout.style.alignItems= "center";
+    sidebarfootercheckout.style.justifyContent= "end";
+    sidebarfootercheckout.style.borderRadius= "50px";
+    sidebarfootercheckout.style.padding= "5px";
+
+    let checkoutsapn1 = document.querySelector(".checkout span:nth-child(1)");
+    checkoutsapn1.style.width= "70%";
+    checkoutsapn1.style.color= "white";
+    checkoutsapn1.style.fontWeight= "bold";
+    checkoutsapn1.style.fontSize= "16px";
+    checkoutsapn1.style.float= "left";
+
+    let checkoutsapn2 = document.querySelector(".checkout span:nth-child(2)");
+    checkoutsapn2.style.backgroundColor= "white";
+    checkoutsapn2.style.color=  "rgb(0,159,127)";
+    checkoutsapn2.style.borderRadius= "50px";
+    checkoutsapn2.style.padding= "10px 20px";
+    checkoutsapn2.style.fontWeight= "bold";
 
     window.onclick = function(event) { 
-        if (!event.target.matches('#dropdownbtn') && !event.target.matches(".dropdown") && !event.target.matches(".icons") && !event.target.matches(".items") ) {
+        if (!event.target.matches('#dropdownbtn') && 
+        !event.target.matches(".dropdown") && 
+        !event.target.matches(".icons") && 
+        !event.target.matches(".items") &&
+        !event.target.matches("#up") &&
+        !event.target.matches("#down")) {
           var dropdowns = document.querySelectorAll(".dropdown");
           var i;
           for (i = 0; i < dropdowns.length; i++) {
