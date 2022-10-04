@@ -16,14 +16,6 @@
     header.style.backgroundSize = "cover";
     header.style.position = "relative"
 
-    //overlay container
-    let createOverlay = document.createElement("div");
-    createOverlay.style.position = "absolute";
-    createOverlay.style.backgroundColor = "black"
-    createOverlay.style.opacity = "0.5";
-    createOverlay.style.width = "100%";
-    createOverlay.style.height = "100%";
-    header.appendChild(createOverlay);
 
     //navbar part
     let navbar = document.querySelector(".navbar")
@@ -56,11 +48,6 @@
     // dropdownlist.style.height = "auto";
     // dropdownlist.style.width = "auto";
     // dropdownlist.style.marginLeft = "40px";
-
-
-    // let dropdownlink = document.querySelectorAll(".dropdown div a");
-    // dropdownlink.style.textDecoration = "none";
-    // dropdownlink.style.color = "black";
 
 
     // dropdown button
@@ -254,19 +241,22 @@ subheaderinputbtn.style.gap="10px";
 function openNav() {
     document.getElementById("mySidenav").style.width = "450px";
     document.querySelector(".sidebar-body .emptybag").style.width = "300px";
-    // body.style.zIndex = "2";
-    // body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    header.style.background = "rgba(0,0,0,0.4)";
-    header.style.backgroundRepeat = "no-repeat";
-    header.style.backgroundSize = "cover";
+
+    let createOverlay = document.createElement("div");
+    createOverlay.style.position = "absolute";
+    createOverlay.style.backgroundColor = "black"
+    createOverlay.style.opacity = "0.5";
+    createOverlay.style.width = "100%";
+    createOverlay.style.height = "100%";
+    createOverlay.style.top = "0";
+    createOverlay.style.left = "0";
+    body.appendChild(createOverlay);
   }
   
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.querySelector(".sidebar-body .emptybag").style.width = "0";
-    header.style.backgroundImage = "url(./Media/backgroundImage1920jpeg.jpg)";
-    header.style.backgroundRepeat = "no-repeat";
-    header.style.backgroundSize = "cover";
+    body.removeChild(body.lastChild);
   }
 
     let addtocart= document.getElementById("addtocart");
@@ -300,8 +290,6 @@ function openNav() {
     {
         document.getElementById("mySidenav").style.width = "0";
         document.querySelector(".sidebar-body .emptybag").style.width = "0";
-        header.style.backgroundImage = "url(./Media/backgroundImage1920jpeg.jpg)";
-    header.style.backgroundRepeat = "no-repeat";
-    header.style.backgroundSize = "cover";
+        body.removeChild(body.lastChild);
     }
       }
