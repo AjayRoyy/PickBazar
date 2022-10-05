@@ -226,16 +226,7 @@ subheaderinput.style.height = "50px";
 subheaderinput.style.borderRadius = "5px 0px 0px 5px";
 subheaderinput.style.boxShadow = "0px 2px 3px grey";
 subheaderinput.style.textAlign = "center";
-subheaderinput.style.position = "sticky";
-subheaderinput.style.top ="0px";
 
-if(subheaderinput.style.position=="sticky" && subheaderinput.style.top =="0px")
-{
-    navbar.style.position = "sticky";
-    navbar.style.top = "0px";
-    navbar.style.left = "0px";
-    navbar.style.zIndex = "1";
-}
 
 let subheaderinputbtn = document.querySelector(".subheader1 div button");
 subheaderinputbtn.style.backgroundColor = "rgb(0,159,127)"
@@ -449,6 +440,209 @@ carouselbtnback.onclick = () => {
 
 //carousel ended
 
+// let mainitems = document.querySelector(".main-items");
+//     // mainitems.innerHTML = cards
+//     repcards = ``;
+
+//     let cards = `<div class="card">
+                
+// <img src="./Media/mains items/Apples.webp" alt="">
+// <div class="cardbody">
+// <span>$1.60 <del> $2.00 </del></span>
+// <span style="font-size: 14px ; color:rgb(128, 128, 128);">Apples</span>
+// <span id="cardadd"><span id="decreament">-</span> Add <span id="increament">+</span></span>
+// </div>
+
+// </div>`;
+
+
+let fruits = {
+
+    "vegNames" : ["Apples",
+                "Baby Spinach",
+                "Blue Berries",
+                "Brussels Sprouts",
+                "Celery Sticks",
+                "Clementines",
+                "Corn",
+                "Cucumber",
+                "Dates",
+                "French Green Beans",
+                "Green Beans",
+                "Green Limes",
+                "Mango",
+                "Mini Peppers",
+                "Pears",
+                "Peeled Carrots",
+                "Red Cherries",
+                "Signature Salmon",
+                "Strawberry",
+                "Veggie Platter",
+                "Yellow-limes"
+                    ],
+    "VegItems" : ["./Media/mainsitems/Apples.webp",
+                    "./Media/mainsitems/BabySpinach.webp",
+                    "./Media/mainsitems/blueberries.webp",
+                    "./Media/mainsitems/BrusselsSprouts.webp",
+                    "./Media/mainsitems/CelerySticks.webp",
+                    "./Media/mainsitems/clementines.webp",
+                    "./Media/mainsitems/Corn.webp",
+                    "./Media/mainsitems/Cucumber.webp",
+                    "./Media/mainsitems/Dates.webp",
+                    "./Media/mainsitems/FrenchGreenBeans.webp",
+                    "./Media/mainsitems/GreenBeans.webp",
+                    "./Media/mainsitems/GreenLimes.webp",
+                    "./Media/mainsitems/Mangoes.webp",
+                    "./Media/mainsitems/MiniPeppers.webp",
+                    "./Media/mainsitems/pears.webp",
+                    "./Media/mainsitems/Peeled-Carrots.webp",
+                    "./Media/mainsitems/RedCherries.webp",
+                    "./Media/mainsitems/SignatureSalmon_fstp4m.webp",
+                    "./Media/mainsitems/strawberry.webp",
+                    "./Media/mainsitems/VeggiePlatter.webp",
+                    "./Media/mainsitems/Yellow-Limes.webp"
+                ],
+    "vegprice" : ["$1.60",
+                "$0.60",
+                "$3.00",
+                "$3.00",
+                "$5.00",
+                "$2.50",
+                "$4.00",
+                "$2.50",
+                "$8.00",
+                "$1.20",
+                "$4.00",
+                "$1.50",
+                "$2.50",
+                "$5.00",
+                "$3.50",
+                "$2.20",
+                "$1.80",
+                "$8.00",
+                "$3.20",
+                "$1.20",
+                "$4.95"
+],
+    "vegCuttedPrice" : [
+        "$2.00",
+        "$5.00",
+        "$6.00",
+        "$5.00",
+        "$10.00",
+        "$1.50",
+        "$5.00",
+        "$10.00",
+        "$2.00",
+        "$6.00",
+        "$4.00",
+        "$2.50",
+        "$2.00",
+        "$10.00",
+        "$4.00",
+        "$1.50",
+        "$2.20",
+        "$1.80",
+        "$8.00",
+        "$3.20",
+        "$1.20",
+        "$4.95"
+]
+
+}
+    
+
+
+let mainitems = document.querySelector(".main-items");
+
+for(let i = 0; i <=20; i++)
+{
+    let cards = document.createElement("div");
+cards.className = "card";
+mainitems.appendChild(cards);
+
+let cardimg = document.createElement("img");
+cardimg.setAttribute("src",`${fruits.VegItems[i]}`);
+cards.appendChild(cardimg);
+
+let cardbody = document.createElement("div");
+cardbody.className ="cardbody";
+cards.appendChild(cardbody);
+
+
+let cardbodyspan1 = document.createElement("span");
+let cardbodyspan1text = document.createTextNode(`${fruits.vegprice[i]}`);
+cardbodyspan1.appendChild(cardbodyspan1text);
+
+let cardbodyspan1del = document.createElement("del");
+if(i==0 ||i==3 ||i==5 ||i==6 ||i==7 ||i==8 ||i==9  ||i==10 ||i==11 ||i==12 ||i==13 ||i==15 ||i==18 ||i==19 ||i==20 )
+{
+    let cardbodyspan1deltext = document.createTextNode(`${fruits.vegCuttedPrice[i]}`);
+    cardbodyspan1del.appendChild(cardbodyspan1deltext);
+    cardbodyspan1.appendChild(cardbodyspan1del); 
+} 
+let cardbodyspan2 = document.createElement("span");
+cardbodyspan2.style.fontSize = "14px";
+cardbodyspan2.style.color = "rgb(128, 128, 128)";
+
+let cardbodyspan2text = document.createTextNode(`${fruits.vegNames[i]}`);
+cardbodyspan2.appendChild(cardbodyspan2text);
+
+let cardbodyspan3 = document.createElement("span");
+cardbodyspan3.id = "cardadd";
+
+let cardbodyspan3decreament = document.createElement("span");
+cardbodyspan3decreament.id = "decreament";
+
+let cardbodyspan3decreamenttext = document.createTextNode("-");
+cardbodyspan3decreament.appendChild(cardbodyspan3decreamenttext);
+cardbodyspan3.appendChild(cardbodyspan3decreament);
+
+let cardbodyspan3text = document.createTextNode("Add");
+cardbodyspan3.appendChild(cardbodyspan3text);
+
+let cardbodyspan3increament = document.createElement("span");
+cardbodyspan3increament.id = "increament";
+
+let cardbodyspan3increamenttext = document.createTextNode("+");
+cardbodyspan3increament.appendChild(cardbodyspan3increamenttext);
+
+cardbodyspan3.appendChild(cardbodyspan3increament);
+
+cardbody.appendChild(cardbodyspan1);
+cardbody.appendChild(cardbodyspan2);
+cardbody.appendChild(cardbodyspan3);
+
+}
+
+// let slidedownbtn = document.querySelectorAll(".sideitems ul li");
+// slidedownbtn.forEach(function(li){
+//     li.onclick=()=>{
+//         document.querySelector(".sideitems ul li span:nth-child(2)").style.maxHeight = "300px";
+//     }
+// })
+
+let accordian = document.querySelectorAll(".accord");
+let panel = document.querySelector(".panel");
+accordian.forEach(function(e){
+    this.onclick=()=>{
+        if(panel.style.maxHeight=="0px")
+        {
+        panel.style.maxHeight="500px";
+        panel.style.transition = "1s ease-in-out";
+        document.querySelector(".chevrondown").style.display = "none";
+        document.querySelector(".chevronup").style.display = "block";
+        }
+        else
+        {
+            panel.style.maxHeight="0px";
+            panel.style.transition = "1s ease-in-out";
+            document.querySelector(".chevrondown").style.display = "block";
+            document.querySelector(".chevronup").style.display = "none";
+        }
+    }
+    
+})
 
 window.onclick = function (event) {
     if (!event.target.matches('#dropdownbtn') &&
@@ -485,83 +679,5 @@ window.onclick = function (event) {
         }
     }
 }
-
-
-// let mainitems = document.querySelector(".main-items");
-//     // mainitems.innerHTML = cards
-//     repcards = ``;
-
-//     let cards = `<div class="card">
-                
-// <img src="./Media/mains items/Apples.webp" alt="">
-// <div class="cardbody">
-// <span>$1.60 <del> $2.00 </del></span>
-// <span style="font-size: 14px ; color:rgb(128, 128, 128);">Apples</span>
-// <span id="cardadd"><span id="decreament">-</span> Add <span id="increament">+</span></span>
-// </div>
-
-// </div>`;
-
-
-let mainitems = document.querySelector(".main-items");
-
-for(let i = 0; i <=20; i++)
-{
-    let cards = document.createElement("div");
-cards.className = "card";
-mainitems.appendChild(cards);
-
-let cardimg = document.createElement("img");
-cardimg.setAttribute("src","../pickbazar/Media/mainsitems/Apples.webp");
-cards.appendChild(cardimg);
-
-let cardbody = document.createElement("div");
-cardbody.className ="cardbody";
-cards.appendChild(cardbody);
-
-
-let cardbodyspan1 = document.createElement("span");
-let cardbodyspan1text = document.createTextNode("$1.60");
-cardbodyspan1.appendChild(cardbodyspan1text);
-
-let cardbodyspan1del = document.createElement("del");
-let cardbodyspan1deltext = document.createTextNode("$2.00");
-cardbodyspan1del.appendChild(cardbodyspan1deltext);
-cardbodyspan1.appendChild(cardbodyspan1del);
-
-let cardbodyspan2 = document.createElement("span");
-cardbodyspan2.style.fontSize = "14px";
-cardbodyspan2.style.color = "rgb(128, 128, 128)";
-
-let cardbodyspan2text = document.createTextNode("Apples");
-cardbodyspan2.appendChild(cardbodyspan2text);
-
-let cardbodyspan3 = document.createElement("span");
-cardbodyspan3.id = "cardadd";
-
-let cardbodyspan3decreament = document.createElement("span");
-cardbodyspan3decreament.id = "decreament";
-
-let cardbodyspan3decreamenttext = document.createTextNode("-");
-cardbodyspan3decreament.appendChild(cardbodyspan3decreamenttext);
-cardbodyspan3.appendChild(cardbodyspan3decreament);
-
-let cardbodyspan3text = document.createTextNode("Add");
-cardbodyspan3.appendChild(cardbodyspan3text);
-
-let cardbodyspan3increament = document.createElement("span");
-cardbodyspan3increament.id = "increament";
-
-let cardbodyspan3increamenttext = document.createTextNode("+");
-cardbodyspan3increament.appendChild(cardbodyspan3increamenttext);
-
-cardbodyspan3.appendChild(cardbodyspan3increament);
-
-cardbody.appendChild(cardbodyspan1);
-cardbody.appendChild(cardbodyspan2);
-cardbody.appendChild(cardbodyspan3);
-
-}
-
 
 

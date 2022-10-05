@@ -118,9 +118,16 @@
   }
   .sideitems
   {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     background-color: white;
     padding: 2rem;
+
+  }
+  .sideitems ul li .container
+  {
+    width: 100%;
+    display: flex;
+    gap: 10px;
   }
   .sideitems ul
   {
@@ -132,14 +139,35 @@
     font-weight: bold;
     font-size: 14px;
     color: rgb(59, 59, 59);
+    position: sticky;
+    top: 50px;
+    cursor: pointer;
   }
   .sideitems ul li
   {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    width: 100%;
 
+  }
+  .sideitems ul li:active
+  {
+    color: rgb(0,159,127);
+  }
+
+  .panel
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 0;
+    overflow:hidden ;
   }
 
   .chevronup
@@ -150,7 +178,7 @@
   .main-items
   {
     max-width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 2rem;
     display: grid;
     grid-template-columns: auto auto auto auto;

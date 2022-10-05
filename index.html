@@ -12,19 +12,19 @@
 </head>
 
 <body>
-    
+
     <div class="header">
 
         <nav class="navbar">
             <div class="logodiv"><img class="logo" src="./Media/PickBazar.webp" alt=""></div>
-    
+
             <div class="dropdownlist">
                 <button id="dropdownbtn"><img class="icons" src="./Media/icons/apple icon.png" alt=""><span
                         class="items">Grocery</span>
                     <ion-icon id="down" name="caret-down-outline"></ion-icon>
                     <ion-icon id="up" name="caret-up-outline"></ion-icon>
                 </button>
-    
+
                 <div class="dropdown">
                     <div class="items" onclick="select()"> <img class="icons" src="./Media/svg icons/apple.svg"
                             alt=""><span class="items">
@@ -59,7 +59,7 @@
                         <li> Become a Seller</li>
                         <li> Join</li>
                     </div>
-    
+
                 </ul>
             </div>
         </nav>
@@ -126,81 +126,184 @@
 
         <div class="sideitems">
             <ul>
-               <li><img class="icons" class="icons" src="./Media/icons/apple icon.png" alt=""><span>Fruits & Vegetables</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li class="accord"><div class="container"><img class="icons" class="icons" src="./Media/icons/apple icon.png" alt=""><span>Fruits &
+                    Vegetables</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                    </div>
+                        <ul class="panel">
+                             <li>Fruits</li>
+                             <li>Vegetables</li>
+                        </ul>
+                </li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/meat.png" alt=""><span>Meat & Fish</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/meat.png" alt=""><span>Meat & Fish</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li>Fresh Fish</li>
+                <li>Meat</li>
+                    </ul>
+                </li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/bakery icon.png" alt=""> <span>Snacks</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/bakery icon.png" alt=""> <span>Snacks</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li> Nuts & Biscuits</li>
+                <li> Chocolates</li>
+                <li> Crisps</li>
+                <li> Noodles & Pasta</li>
+                <li> Sauce</li>
+                <li> Soup</li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/pet-care.png" alt=""> <span>Pet Care</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
 
-               <li> <img class="icons" class="icons" src="./Media/icons/house cleaing.png" alt=""><span>Home & Cleaning</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                    </ul>
+                </li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/dairy.png" alt=""> <span>Dairy</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/pet-care.png" alt=""> <span>Pet Care</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li> Cat Food</li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/cooking.png" alt=""><span>Cooking</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li> Dog Food</li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/breakfast.png" alt=""><span>Breakfast</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                <li> Accessories</li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/beverage.png" alt=""><span>Beverage</span>
-                <span>
-                    <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
-                    <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
 
-               <li><img class="icons" class="icons" src="./Media/icons/beauty.png" alt=""><span>Health & Beauty</span>
+                    </ul>
+                </li>
+
+                <li class="accord"> <div class="container"><img class="icons" class="icons" src="./Media/icons/house cleaing.png" alt=""><span>Home &
+                    Cleaning</span>
                 <span>
                     <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
                     <ion-icon class="chevronup" name="chevron-up"></ion-icon>
-                </span>
-               </li>
+                </span></div>
+                    <ul class="panel">
+                <li> Air Freshner</li>
+
+                <li> Cleaning Products</li>
+
+                <li> Kitchen Accessories</li>
+
+                <li> Laundry</li>
+                    </ul>
+                </li>
+
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/dairy.png" alt=""> <span>Dairy</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li>Milk</li>
+
+                <li> Butter</li>
+
+                <li> Egg</li>
+
+                <li> Yogurt</li>
+                    </ul>
+                </li>
+
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/breakfast.png" alt=""><span>Cooking</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li> Oil</li>
+
+                <li> Rice</li>
+
+                <li> Salt & Sugar</li>
+
+                <li> Spices</li>
+                    </ul>
+                </li>
+
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/breakfast.png" alt=""><span>Breakfast</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                <li> Bread </li>
+
+                <li> Cereal </li>
+
+                <li> Jam </li>
+                    </ul>
+                </li>
+
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/beverage.png" alt=""><span>Beverage</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                        <li> Coffee</li>
+
+                        <li> Energy Drinks</li>
+
+                        <li> Juice</li>
+
+                        <li> Fizzy Drinks</li>
+
+                        <li> Tea</li>
+                    </ul>
+                </li>
+
+                <li class="accord"><div class="container">
+                    <img class="icons" class="icons" src="./Media/icons/beauty.png" alt=""><span>Health & Beauty</span>
+                    <span>
+                        <ion-icon class="chevrondown" name="chevron-down"></ion-icon>
+                        <ion-icon class="chevronup" name="chevron-up"></ion-icon>
+                    </span>
+                </div>
+                    <ul class="panel">
+                       <li> Bath</li>
+
+                       <li> Cream</li>
+
+                       <li> Deodorant</li>
+
+                       <li> Face Care</li>
+
+                       <li> Oral Care</li>
+
+                       <li> Shaving Needs</li>
+                    </ul>
+                </li>
 
             </ul>
         </div>
 
         <div class="main-items">
-
 
         </div>
 
