@@ -622,28 +622,6 @@ cardbody.appendChild(cardbodyspan3);
 //     }
 // })
 
-let accordian = document.querySelectorAll(".accord");
-let panel = document.querySelector(".panel");
-accordian.forEach(function(e){
-    this.onclick=()=>{
-        if(panel.style.maxHeight=="0px")
-        {
-        panel.style.maxHeight="500px";
-        panel.style.transition = "1s ease-in-out";
-        document.querySelector(".chevrondown").style.display = "none";
-        document.querySelector(".chevronup").style.display = "block";
-        }
-        else
-        {
-            panel.style.maxHeight="0px";
-            panel.style.transition = "1s ease-in-out";
-            document.querySelector(".chevrondown").style.display = "block";
-            document.querySelector(".chevronup").style.display = "none";
-        }
-    }
-    
-})
-
 window.onclick = function (event) {
     if (!event.target.matches('#dropdownbtn') &&
         !event.target.matches(".dropdown") &&
@@ -680,4 +658,36 @@ window.onclick = function (event) {
     }
 }
 
+// let accordian = document.querySelectorAll(".accord");
+//     accordian.onclick=()=>{
+//         if(document.querySelector(".panel").style.maxHeight=="0px")
+//         {
+//             document.querySelector(".panel").style.maxHeight="500px";
+//             document.querySelector(".panel").style.transition = "1s ease-in-out";
+//         document.querySelector(".chevrondown").style.display = "none";
+//         document.querySelector(".chevronup").style.display = "block";
+//         }
+//         else
+//         {
+//             document.querySelector(".panel").style.maxHeight="0px";
+//             document.querySelector(".panel").style.transition = "1s ease-in-out";
+//             document.querySelector(".chevrondown").style.display = "block";
+//             document.querySelector(".chevronup").style.display = "none";
+//         }
+//     }
+
+let accord = document.querySelectorAll(".container");
+
+for (i = 0; i < accord.length; i++) {
+    accord[i].addEventListener("click", function() {
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        panel.style.transition = "1s ease-in-out";
+      } else {
+        panel.style.maxHeight = "1000px";
+        panel.style.transition = "1s ease-in-out";
+      } 
+    });
+}
 

@@ -123,12 +123,6 @@
     padding: 2rem;
 
   }
-  .sideitems ul li .container
-  {
-    width: 100%;
-    display: flex;
-    gap: 10px;
-  }
   .sideitems ul
   {
     display: flex;
@@ -151,11 +145,18 @@
     align-items: center;
     gap: 10px;
     width: 100%;
+    /* overflow: hidden; */
 
   }
   .sideitems ul li:active
   {
     color: rgb(0,159,127);
+  }
+  .sideitems ul li .container
+  {
+    width: 100%;
+    display: flex;
+    gap: 10px;
   }
 
   .panel
@@ -163,9 +164,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     max-height: 0;
     overflow:hidden ;
   }
@@ -197,6 +195,11 @@
     display: flex;
     flex-direction: column;
     padding: 2rem;
+  }
+  .card:hover
+  {
+    transform: translateY(-2px);
+    transition: 0.1s linear;
   }
   .card img
   {
