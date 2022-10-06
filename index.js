@@ -407,7 +407,6 @@ let cauroselitems = document.querySelectorAll(".content img");
 let currentImage = 0;
 let content = document.querySelector(".content");
 carouselbtnback.style.display="none"
-
 carouselbtnforward.onclick = () => {
         if (currentImage === 105) {
             currentImage = 210;
@@ -421,6 +420,7 @@ carouselbtnforward.onclick = () => {
         slide.style.transform = `translateX(${(indx - currentImage)}%`;
         slide.style.transition = "0.3s linear";
       });
+      console.log(currentImage);
 }
 
 carouselbtnback.onclick = () => {
@@ -431,11 +431,13 @@ carouselbtnback.onclick = () => {
       } else {
           currentImage-=105;
           carouselbtnback.style.display="block";
+          carouselbtnforward.style.display="block";
       }
     cauroselitems.forEach((slide, indx) => {
         slide.style.transform = `translateX(${(indx - currentImage)}%`;
         slide.style.transition = "0.3s linear";   
       });
+      console.log(currentImage);
 }
 
 //carousel ended

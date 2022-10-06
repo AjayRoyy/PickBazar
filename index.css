@@ -145,7 +145,7 @@
     align-items: center;
     gap: 10px;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 
   }
   .sideitems ul li:active
